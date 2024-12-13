@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla Personalizada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Configuración de columnas específicas */
+        .grid-3x3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4x4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-5x5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .grid-6x6 {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .cell {
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(45deg, #1e3a8a, #6d28d9);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos personalizados para celdas destacadas */
+        .highlight {
+            background: linear-gradient(45deg, #37afbe, #6d28d9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Grilla 3x3 -->
+    <div class="grid grid-3x3">
+        <div class="cell highlight">1</div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
+        <div class="cell">6</div>
+        <div class="cell">7</div>
+        <div class="cell">8</div>
+        <div class="cell highlight">9</div>
+    </div>
+
+    <!-- Grilla 4x4 -->
+    <div class="grid grid-4x4">
+        <div class="cell">1</div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
+        <div class="cell">6</div>
+        <div class="cell">7</div>
+        <div class="cell">8</div>
+        <div class="cell">9</div>
+        <div class="cell">10</div>
+        <div class="cell">11</div>
+        <div class="cell">12</div>
+        <div class="cell">13</div>
+        <div class="cell">14</div>
+        <div class="cell">15</div>
+        <div class="cell">16</div>
+    </div>
+
+    <!-- Grilla 5x5 -->
+    <div class="grid grid-5x5">
+        <div class="cell">1</div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
+        <div class="cell">6</div>
+        <div class="cell">7</div>
+        <div class="cell">8</div>
+        <div class="cell">9</div>
+        <div class="cell">10</div>
+        <div class="cell">11</div>
+        <div class="cell">12</div>
+        <div class="cell">13</div>
+        <div class="cell">14</div>
+        <div class="cell">15</div>
+        <div class="cell">16</div>
+        <div class="cell">17</div>
+        <div class="cell">18</div>
+        <div class="cell">19</div>
+        <div class="cell">20</div>
+        <div class="cell">21</div>
+        <div class="cell">22</div>
+        <div class="cell">23</div>
+        <div class="cell">24</div>
+        <div class="cell">25</div>
+    </div>
+
+    <!-- Grilla 6x6 -->
+    <div class="grid grid-6x6">
+        <div class="cell">1</div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
+        <div class="cell">6</div>
+        <div class="cell">7</div>
+        <div class="cell">8</div>
+        <div class="cell">9</div>
+        <div class="cell">10</div>
+        <div class="cell">11</div>
+        <div class="cell">12</div>
+        <div class="cell">13</div>
+        <div class="cell">14</div>
+        <div class="cell">15</div>
+        <div class="cell">16</div>
+        <div class="cell">17</div>
+        <div class="cell">18</div>
+        <div class="cell">19</div>
+        <div class="cell">20</div>
+        <div class="cell">21</div>
+        <div class="cell">22</div>
+        <div class="cell">23</div>
+        <div class="cell">24</div>
+        <div class="cell">25</div>
+        <div class="cell">26</div>
+        <div class="cell">27</div>
+        <div class="cell">28</div>
+        <div class="cell">29</div>
+        <div class="cell">30</div>
+        <div class="cell">31</div>
+        <div class="cell">32</div>
+        <div class="cell">33</div>
+        <div class="cell">34</div>
+        <div class="cell">35</div>
+        <div class="cell">36</div>
+    </div>
+</body>
+</html>

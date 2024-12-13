@@ -1,0 +1,293 @@
+<!-- Botones para cambiar las columnas con el mismo color de fondo -->
+<div class="button-group text-center">
+    <button 
+        (click)="showColumns(1)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 1
+    </button>
+    <button 
+        (click)="showColumns(2)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 2
+    </button>
+    <button 
+        (click)="showColumns(3)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 3
+    </button>
+    <button 
+        (click)="showColumns(4)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 4
+    </button>
+    <button 
+        (click)="showColumns(5)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 5
+    </button>
+    <button 
+        (click)="showColumns(6)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 6
+    </button>
+    <button 
+        (click)="showColumns(7)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 7
+    </button>
+    <button 
+        (click)="showColumns(8)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 8
+    </button>
+    <button 
+        (click)="showColumns(9)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 9
+    </button>
+    <button 
+        (click)="showColumns(10)" 
+        class="btn-gradient p-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300">
+        Columna 10
+    </button>
+</div>
+
+<!-- Estilos en línea dentro del HTML -->
+<style>
+    /* Estilo para los botones con gradiente */
+    .btn-gradient {
+        background-image: linear-gradient(45deg, #FF7F50, #6A5ACD);
+        border: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px 24px;
+        border-radius: 9999px; /* Hace que los botones sean redondeados */
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto hover */
+    .btn-gradient:hover {
+        background-image: linear-gradient(45deg, #FF6347, #8A2BE2); /* Un cambio sutil de gradiente al pasar el mouse */
+        transform: scale(1.05); /* Hace que el botón crezca ligeramente */
+    }
+
+    /* Estilo para las columnas */
+    .grid {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .col {
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        background-color: #FF6347; /* Color de fondo de las columnas */
+    }
+
+    .col:nth-child(odd) {
+        background-color: #6c0b80; /* Color para las columnas impares */
+    }
+
+    .col:nth-child(even) {
+        background-color: #6A5ACD; /* Color para las columnas pares */
+    }
+</style>
+
+<!-- Contenido de las columnas que aparece según el valor de activeColumn -->
+<div *ngIf="activeColumn === 1" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(3, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+</div>
+<div *ngIf="activeColumn === 2" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(3, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+</div>
+<div *ngIf="activeColumn === 3" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(3, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 4" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(4, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 5" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(5, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 6" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(6, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+</div>
+
+<!-- Añadir más columnas -->
+<div *ngIf="activeColumn === 7" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(7, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">7</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 8" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(8, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">7</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">8</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 9" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(9, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">7</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">8</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">9</div>
+    </div>
+</div>
+
+<div *ngIf="activeColumn === 10" class="grid" [ngStyle]="{ 'grid-template-columns': 'repeat(10, 1fr)' }">
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">2</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">3</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">5</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">7</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">8</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">9</div>
+    </div>
+    <div class="col">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">10</div>
+    </div>
+</div>
